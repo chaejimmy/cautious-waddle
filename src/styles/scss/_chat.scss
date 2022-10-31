@@ -1,0 +1,227 @@
+/* pages/chat */
+
+.blueTopBar {
+	background: $colorPrimary;
+	height: 120px;
+}
+.container__chat {
+	box-sizing: border-box;
+
+	width: 1200px; // for screens having width > 1000px
+	@media (max-width: 1000px) {
+		// for screens having width <= 1000px
+		width: 800px;
+	}
+	margin: 0px auto;
+	border: 1px solid lightgray;
+	border-radius: $borderRadius;
+	position: relative;
+	background: white;
+	top: -75px;
+
+	.contents {
+		display: flex;
+		flex-shrink: 0;
+		height: 600px;
+
+		.left__column {
+			width: 500px;
+			border-right: $borderLight;
+			display: flex;
+			flex-direction: column;
+
+			.heading {
+				padding: $paddingBar;
+				background-color: $colorGrayForBackground;
+				border-top-left-radius: $borderRadius;
+				font-size: $fontSizeTitle;
+				border-bottom: $borderLight;
+			}
+			.users__list {
+				overflow: auto; // scrollable
+
+				.item {
+					border-bottom: $borderLight;
+					border-right: $borderLight;
+					cursor: pointer;
+
+					min-height: 60px;
+					padding: 10px 20px;
+					// FLEX PROPERTIES
+					display: flex;
+					justify-content: flex-start;
+					align-items: center;
+
+					.item-details {
+						margin-left: 20px;
+						.user-name {
+							font-weight: normal;
+						}
+						.user-name--active {
+							font-weight: bold;
+						}
+					}
+
+					.item-time {
+						color: gray;
+						margin-left: auto;
+					}
+				}
+			}
+		}
+
+		.right__column {
+			// debugging only
+			// background: deeppink;
+
+			//! bad shit..
+			// overflow: auto; // scrollable
+			width: 100%;
+			border-top-right-radius: $borderRadius;
+			display: flex;
+			flex-direction: column;
+			// justify-content: center;
+			// align-items: center;
+			// flex-direction: column;
+
+			.top__bar {
+				// debugging only
+				// background: deepskyblue;
+
+				top: 0px;
+				width: 100%;
+
+				padding: 13px;
+				border-bottom: $borderLight;
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+
+				.top__bar__name {
+					margin-left: 20px;
+					font-size: $fontSizeTitle;
+				}
+			}
+
+			.msg-list {
+				// make it scrollable
+				overflow: auto;
+
+				display: flex;
+				flex-direction: column-reverse;
+				height: 100%;
+			}
+			.msg {
+				padding: 10px;
+				width: fit-content;
+				border-radius: 10px;
+				margin: 5px 30px;
+			}
+			.msg--me {
+				color: white;
+				background: $colorPrimary;
+				margin-left: auto;
+			}
+			.msg--other {
+				color: black;
+				background: $colorGrayForBackground;
+			}
+
+			.input__parent__container {
+				display: flex;
+				padding: 10px;
+
+				.input__message__container {
+					flex-grow: 1;
+					background: $colorGrayForBackground;
+					border-radius: 15px;
+					padding: 5px 15px;
+
+					display: flex;
+					align-items: center;
+
+					// Icon width variable
+					.input__message_icon-1 {
+						width: 30px;
+					}
+					.input__message {
+						flex-grow: 1;
+						padding: 10px;
+						background: inherit;
+						margin-right: 20px;
+						outline: 0;
+					}
+					.input__message_icon-2 {
+						width: 25px;
+					}
+				}
+
+				.send-message-button {
+					width: 70px;
+					height: 70px;
+					margin: 0 15px;
+				}
+			}
+		}
+	}
+
+	// MODIFY DEFAULT SCROLLBARS COZ THEY LOOK DIRTY, src: https://stackoverflow.com/a/17760047
+	::-webkit-scrollbar {
+		width: 12px;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+		box-shadow: none; // added bcoz of linter complaining ~Sahil
+		-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+		-webkit-border-radius: 10px;
+		border-radius: 10px;
+	}
+
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		-webkit-border-radius: 10px;
+		border-radius: 10px;
+		background: rgb(224, 223, 223);
+		box-shadow: none; // added bcoz of linter complaining ~Sahil
+		-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+	}
+}
+
+.size54 {
+	height: 54px;
+	width: 54px;
+}
+.user-pic {
+	border-radius: 50px;
+}
+.user__pic__default > span {
+	border-radius: 50px;
+}
+
+.btn-signout {
+	color: white;
+	margin-top: 50px;
+	padding: 5px 25px;
+	background-color: $colorPrimary;
+	border-radius: $borderRadius;
+}
+
+.otherperson-selector {
+	display: flex;
+	margin-top: 15px;
+
+	input {
+		margin-left: 5px;
+		padding: 2px;
+		outline: 2px solid $colorPrimary;
+		border-radius: $borderRadius;
+	}
+}
+
+// FOR REF
+// FLEX PROPERTIES
+// display: flex;
+// justify-content: center;
+// align-items: center;
+// flex-direction: column;

@@ -1,0 +1,25 @@
+export default {
+	uid: 'B1ThkDgb0BYLZuMwszIId9rfAI13',
+	email: 'sahilrajput03@gmail.com',
+	emailVerified: false,
+	isAnonymous: false,
+	providerData: [
+		{
+			providerId: 'password',
+			uid: 'sahilrajput03@gmail.com',
+			displayName: null,
+			email: 'sahilrajput03@gmail.com',
+			phoneNumber: null,
+			photoURL: null,
+		},
+	],
+	stsTokenManager: {
+		refreshToken: 'AOEOulaKgl7D5tdIeNB_-C8_gd7ulzK824XmwNWv2aWswd_R1kuT0MjGso34M_UQJdS4X_0eEcyyyQYKvMRKv1hIzlOs9r7PyvHczpYrAWJFZOj7eSYimeSc3M_WqCkDjEL23AkvGLH_Ff1olHdj2uQS1o5qi41wGRNxZOK9FdyYeRZnOB3AIjm7P7gRzP4rOv9YXLBPt6DnbDn9xLebBZ6IvaIKR3kocdB63yrso2KHDCYxMnbzLDJjBQMR3Qicd9AC9ZeRc5h4',
+		accessToken: 'eyJhbGciOiJSUzI1NiIsImtpZCI6IjUyZmEwZjE2NmJmZjZiODU5N2FjMGFlMDRlNTllZmYxOTk1N2MyYmIiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZm9yLW5leHQtYXV0aC1leGFtcGxlLXByb2plY3QiLCJhdWQiOiJmb3ItbmV4dC1hdXRoLWV4YW1wbGUtcHJvamVjdCIsImF1dGhfdGltZSI6MTY2MTc3MDA0MiwidXNlcl9pZCI6IkIxVGhrRGdiMEJZTFp1TXdzeklJZDlyZkFJMTMiLCJzdWIiOiJCMVRoa0RnYjBCWUxadU13c3pJSWQ5cmZBSTEzIiwiaWF0IjoxNjYxNzcwMDQyLCJleHAiOjE2NjE3NzM2NDIsImVtYWlsIjoic2FoaWxyYWpwdXQwM0BnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsic2FoaWxyYWpwdXQwM0BnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.OyihSxOt-YTB52zLjORZZZLecDwp2cvZ2NiKERT0tJkEREHVxpGgejNHuD7V6CksCRJ51pVO078VA7rIVRJTzZNHflunWKgc5y_5HbD7vPU3CfRR7Hej1qqhegKzuj7uL-Inc5G5v28j9F_S7tm3Nx8F36_SGubw7O3QQyI9E0zpVh_6hcygGIGtrfezxYW831UIxzsyMpxBjFMWDk_kXdb6o7rc91BMJrFMHQuHZbp4rbWK81HsmJc4Y62DdiSQHgk5c-1AGE8LM6nwo4nnHmUAwdTgRCx8Qsbnv2HdSQ_KhU6HYuH389DHhhFCySUYaZb9-km-WA0YQ7Z9x2hU0w',
+		expirationTime: 1661773642355,
+	},
+	createdAt: '1661769457235',
+	lastLoginAt: '1661769989934',
+	apiKey: 'AIzaSyD4Mvmy67bkoW25fMBFWPEisD-onV1N2Sc',
+	appName: '[DEFAULT]',
+};

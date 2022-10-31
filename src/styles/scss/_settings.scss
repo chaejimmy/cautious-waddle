@@ -1,0 +1,187 @@
+// Componennt Settings Page
+$paddingLeft: 22px;
+
+.root__container__settings {
+	position: relative;
+	top: -75px;
+	margin-bottom: -75px;
+
+	.container__settings {
+		background: white;
+		max-width: 950px;
+		height: 620px;
+		// styling
+		margin: auto;
+		margin-bottom: 35px;
+		// Shadow Beauty
+		margin-top: 40px;
+		box-shadow: 0 0px 30px 2px grey;
+		border-radius: 20px;
+
+		.heading__and__cross__icon {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			.heading {
+				padding-top: 30px;
+				padding-bottom: 20px;
+				padding-left: $paddingLeft;
+				font-size: 1.5rem;
+			}
+			.cross_icon > span {
+				cursor: pointer;
+				width: 34px !important;
+				margin-right: 23px !important;
+			}
+		}
+
+		.container__settings__child {
+			display: flex;
+			height: 100%;
+
+			.left__column {
+				width: 350px;
+				transition: border-top 0.4s;
+				border-right: $borderLight;
+
+				&.add__border__top {
+					border-top: $borderLight;
+				}
+
+				.setting__title {
+					padding-top: 30px;
+					padding-bottom: 30px;
+					padding-left: $paddingLeft;
+					font-size: 1.5em;
+					transition: background-color 0.8s;
+					border-bottom: none;
+					cursor: pointer;
+
+					&.active {
+						background-color: $inputBoxBackground;
+					}
+				}
+			}
+			.right__column {
+				border-top: $borderLight;
+				width: 100%;
+
+				&.tab__notifications {
+					.container__item {
+						display: flex;
+						justify-content: space-between;
+						margin-right: 23px;
+						padding-top: 40px;
+						padding-bottom: 27px;
+						margin-left: 30px;
+						border-bottom: $borderLight;
+
+						.input__toggler {
+							.switch {
+								position: relative;
+								display: inline-block;
+								width: 60px;
+								height: 34px;
+							}
+
+							.switch input {
+								opacity: 0;
+								width: 0;
+								height: 0;
+							}
+
+							.slider {
+								position: absolute;
+								cursor: pointer;
+								top: 0;
+								left: 0;
+								right: 0;
+								bottom: 0;
+								background-color: #ccc;
+								-webkit-transition: 0.4s;
+								transition: 0.4s;
+							}
+
+							.slider:before {
+								position: absolute;
+								content: '';
+								height: 26px;
+								width: 26px;
+								left: 4px;
+								bottom: 4px;
+								background-color: white;
+								-webkit-transition: 0.4s;
+								transition: 0.4s;
+							}
+
+							input:checked + .slider {
+								background-color: #2196f3;
+							}
+
+							input:checked + .slider:before {
+								-webkit-transform: translateX(26px);
+								-ms-transform: translateX(26px);
+								transform: translateX(26px);
+							}
+							/* Rounded sliders */
+							.slider.round {
+								border-radius: 34px;
+							}
+
+							.slider.round:before {
+								border-radius: 50%;
+							}
+						}
+					}
+				}
+
+				// Change Password Elements
+				&.tab__change__password {
+					padding: 22px 29px;
+
+					.input__label {
+						margin-bottom: 6px;
+						color: #696888;
+					}
+					// select `.input__label` items which are preceeded by `input` (this to prevent giving margin-top to the first `input__label` item
+					input + .input__label {
+						margin-top: 29px;
+					}
+					input {
+						width: 100%;
+						padding: 18px;
+						background: $inputBoxBackground;
+						border-radius: 6px;
+						outline: none;
+					}
+					// input:last-child {
+					// 	margin-bottom: 10px !important;
+					//   }
+					.reset__password {
+						color: $colorPrimary;
+						margin-left: auto;
+						margin-left: auto;
+						width: fit-content;
+						margin-top: 10px;
+						margin-bottom: 32px;
+						cursor: pointer;
+					}
+					button {
+						width: 100%;
+						padding-top: 20px;
+						padding-bottom: 20px;
+						border-radius: 5px;
+						background: $colorPrimary;
+						color: white;
+						font-weight: bold;
+					}
+				}
+				.help__tab__content {
+					padding: 50px;
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,32 @@
+// for anything new to start
+
+.root__container__add__card {
+	max-width: 950px;
+	box-shadow: 2px 0px 8px -1px grey;
+	margin-top: 100px;
+	margin-left: 100px;
+	border-radius: 15px;
+
+	.container__add__card {
+		display: flex;
+
+		padding-right: 28px;
+
+
+		.column__left {
+			min-width: 312px;
+			padding-top: 50px;
+			border-right: 0.1px solid lightgray;
+		}
+		.column__right {
+			width: 100%;
+			max-width: 600px;
+			padding: 30px 0px 34px 30px;
+
+			input {
+				border: 0;
+				outline: 0;
+			}
+		}
+	}
+}

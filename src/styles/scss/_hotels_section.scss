@@ -1,0 +1,191 @@
+// homepage:
+// 1. hotels section
+.hotels__container {
+	display: flex;
+	flex-wrap: wrap;
+	$borderRadius: 15px;
+	// padding: 20px;
+
+	// To make children take divide all the space available between them automatically
+	& > * {
+		flex: 1;
+		min-width: 300px;
+	}
+
+	.hotel__card {
+		box-shadow: 2px 0px 8px -1px grey;
+		margin: 10px;
+		border-radius: $borderRadius;
+		// padding: 15px;
+		display: flex;
+		flex-direction: column;
+		width: 320px;
+		cursor: pointer;
+
+		.container__details {
+			padding: 10px;
+
+			.hotel__name {
+				font-size: 1.125rem;
+			}
+
+			.container__currency__and__rating {
+				display: flex;
+				justify-content: space-between;
+
+				.rating__container {
+					display: flex;
+					justify-content: flex-start;
+					align-items: center;
+
+					.rating__number {
+						margin-right: 5px;
+						margin-top: 3px;
+						color: #787878;
+					}
+				}
+			}
+
+			.light__gray {
+				color: gray;
+			}
+		}
+
+		.hotel__image__container {
+			position: relative;
+
+			.hotel__image {
+				width: 100%;
+				height: 180px;
+				object-fit: cover;
+				border-top-left-radius: $borderRadius;
+				border-top-right-radius: $borderRadius;
+				border: 0.1px solid lightgray;
+			}
+
+			.start__end__date {
+				box-shadow: 2px 0px 8px -1px grey;
+				border-radius: $borderRadius;
+				width: fit-content;
+				padding: 5px 5px;
+				background: white;
+
+				position: absolute;
+				bottom: 10px;
+				left: 10px;
+			}
+		}
+	}
+}
+
+// 2. hotels by partner section
+.container__hotels__by__partner {
+	display: flex;
+	flex-wrap: wrap;
+	$borderRadius: 15px;
+	// padding: 20px;
+
+	// To make children take divide all the space available between them automatically
+	& > * {
+		flex: 1;
+		min-width: 300px;
+	}
+
+	.hotel__card {
+		box-shadow: 2px 0px 8px -1px grey;
+		margin: 10px;
+		border-radius: $borderRadius;
+		// padding: 15px;
+		display: flex;
+		flex-direction: column;
+		width: 320px;
+		cursor: pointer;
+
+		.container__details {
+			padding: 10px;
+
+			.hotel__name {
+				font-size: 1.125rem;
+			}
+
+			.container__currency__and__rating {
+				display: flex;
+				justify-content: space-between;
+
+				.rating__container {
+					display: flex;
+					justify-content: flex-start;
+					align-items: center;
+
+					.rating__number {
+						margin-right: 5px;
+						margin-top: 3px;
+						color: #787878;
+					}
+				}
+			}
+
+			.light__gray {
+				color: gray;
+			}
+		}
+
+		.hotel__image__container {
+			position: relative;
+			height: 180px;
+			border: 0.1px solid lightgray;
+			border-top-left-radius: $borderRadius;
+			border-top-right-radius: $borderRadius;
+			overflow: hidden;
+
+
+			.start__end__date {
+				box-shadow: 2px 0px 8px -1px grey;
+				border-radius: $borderRadius;
+				width: fit-content;
+				padding: 5px 5px;
+				background: white;
+				border-top-left-radius: $borderRadius;
+				border-top-right-radius: $borderRadius;
+	
+
+				position: absolute;
+				bottom: 10px;
+				left: 10px;
+			}
+			.container__male__female__or__both {
+				box-shadow: 2px 0px 8px -1px grey;
+				border-radius: $borderRadius;
+				width: fit-content;
+				padding: 5px 5px;
+				background: white;
+				border: 1px solid $colorPrimary;
+				color: $colorPrimary;
+
+				position: absolute;
+				bottom: 10px;
+				right: 10px;
+				padding-right: 10px;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				&.should__be__top {
+					// ! here
+					bottom: auto;
+					top: 10px;
+				}
+
+				.container__image__male__female {
+					position: relative;
+					width: 12px;
+					display: flex;
+					align-items: center;
+					margin-right: 3px;
+					margin-left: 5px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,125 @@
+$maxWidthContainer: 1400px;
+
+.blueTopBar__tabs {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
+	color: white;
+
+	.container__tabs {
+		min-width: $maxWidthContainer;
+		margin: auto auto 8px;
+	}
+
+	span {
+		// margin: 7px 10px;
+		border-bottom: 3px solid $colorPrimary;
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-bottom: 4px;
+		font-weight: bold;
+		cursor: pointer;
+
+		& + span {
+			margin-left: 40px;
+		}
+
+		&.active {
+			border-bottom: 3px solid white;
+			border-radius: 3px;
+		}
+	}
+}
+
+.root__container__postslist {
+	position: relative;
+
+	.container__postslist {
+		display: flex;
+		justify-content: center;
+		background: white;
+		max-width: $maxWidthContainer;
+		margin: auto;
+		margin-bottom: 35px;
+		// Shadow Beauty
+		margin-top: 40px;
+		// box-shadow: 0 0px 30px 2px grey;
+		border-radius: 20px;
+		// debugging only
+		// outline: 2px solid red;
+		flex-wrap: wrap;
+
+		.post {
+			display: flex;
+			min-width: 660px;
+			height: 220px;
+			padding: 18px 22px;
+			margin-bottom: 34px;
+			margin-right: 32px;
+			border: 1px solid $inputBoxBackground;
+			border-radius: 12px;
+
+			.right__column {
+				margin-left: 24px;
+
+				.post__date {
+					color: #adacc4;
+				}
+				.title {
+					font-weight: bold;
+					font-size: 1.25rem;
+					margin-bottom: 31px;
+					max-width: 285px;
+					cursor: pointer;
+				}
+				.gender__and__date {
+					display: flex;
+					margin-bottom: 12px;
+
+					.gender {
+						padding: 7px 12px;
+						border-radius: 25px;
+						color: white;
+
+						&.blue {
+							background: $colorPrimary;
+						}
+						&.pink {
+							background: $colorFeminine;
+						}
+						&.gradient {
+							background: linear-gradient(274.21deg, #f26465 -19.11%, #736ffa 110.91%);
+						}
+					}
+
+					.date {
+						margin-left: 19px;
+						padding: 5.5px 7px;
+						border: 1px solid $inputBoxBackground;
+						border-radius: 20px;
+					}
+				}
+				.price {
+					font-size: 1.25rem;
+					span {
+						color: $colorGray;
+					}
+				}
+			}
+
+			.hotel__image > span {
+				width: 300px !important;
+				height: 184px !important;
+			}
+		}
+
+		.expected__places__coming__soon {
+			font-size: 2rem;
+		}
+	}
+}
+
+// Make srrolbar take no space / prevent layout shift
+html {
+    overflow-y: overlay;
+}

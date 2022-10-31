@@ -1,0 +1,154 @@
+// Component: Login Page
+.root_container__login {
+	display: flex;
+	position: relative;
+	top: -75px;
+
+
+	// Setting size of the next/image's Image component.
+	.desired__login__signup > span {
+		width: 500px !important;
+	}
+
+	.container__login {
+		display: flex;
+		flex-direction: column;
+		margin: auto;
+		background: white;
+		// Shadow Beauty
+		margin-top: 40px;
+		box-shadow: 0 0px 30px 2px grey;
+		border-radius: 20px;
+		// debugging only
+		// border: 2px solid red;
+		// background: rgb(100%, 10%, 100%);
+
+		.c1 {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			border-bottom: 1px solid lightgray;
+			padding: 5px;
+
+			.back__icon {
+				width: 30px;
+				margin-top: 8px;
+			}
+
+			// Fix the image
+			.c1__text {
+				font-size: 1rem;
+				text-align: center;
+			}
+
+			.cross__icon {
+				width: 34px;
+			}
+		}
+
+		.inner__container {
+			// Making it flex column is necessary coz otherwise since buttons are default inline elements so they get arranged more than one buttons per line which we don't want.
+			display: flex;
+			flex-direction: column;
+			padding: 35px;
+
+			.c2 {
+				font-size: 1.5rem;
+				font-weight: bold;
+				text-align: center;
+				margin: 20px 0px 12px;
+			}
+			.c3 {
+				font-size: 1rem;
+				text-align: center;
+				max-width: 350px;
+				text-align: center;
+				margin: 0 auto;
+				color: $colorGray;
+			}
+			.c4,
+			.c6 {
+				color: $colorGray;
+				font-size: 1rem;
+				margin: 25px 0 7px;
+			}
+
+			.password__field {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				// border: 2px solid;
+				background: $inputBoxBackground;
+				border-radius: 15px;
+
+				// setting size of <Image/> of next/image component
+				.password__eye > span {
+					width: 18px !important;
+					margin-right: 21px !important;
+					margin-top: 5px !important;
+				}
+			}
+
+			// email/password inputs
+			.c5,
+			.c7 {
+				border-radius: 15px;
+				background: $inputBoxBackground;
+				padding: $inputBoxPadding;
+				outline: none;
+				font-size: 1rem;
+				width: 100%;
+			}
+			// for password input
+			.c7 {
+				color: $colorGray;
+			}
+			.c7--wide-characters {
+				letter-spacing: 13px;
+			}
+			.c8 {
+				text-align: right;
+				color: $colorPrimary;
+				margin-top: 8px;
+				margin-bottom: 25px;
+				font-size: 1rem;
+			}
+			.c9 {
+				color: white;
+				font-size: 1.1rem;
+				background: $colorPrimary;
+				border-radius: 10px;
+				padding: 18px 195px;
+			}
+			.c10 {
+				color: $colorGray;
+				font-size: 1rem;
+				margin-top: 25px;
+				text-align: center;
+			}
+			// This is `c11`
+			.c11 {
+				width: 170px;
+				margin: 15px auto 25px;
+
+				display: flex;
+				justify-content: space-between;
+			}
+			.social__icons > span {
+				width: 60px !important;
+				cursor: pointer;
+			}
+
+			.c12 {
+				color: $colorGray;
+				font-size: 1.1rem;
+				text-align: center;
+				cursor: pointer;
+
+				span {
+					color: $colorPrimary;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,27 @@
+Sign and Login flow with validation
+===================================
+
+# SIGNUP PAGE
+---- Try signup with invalid number									- SHOULD FAIL
+---- Try signup with valid number: +918360267243
+---- Try submit otp with without otp									- SHOULD FAIL
+---- Try submit otp with wrong otp: 0000								- SHOULD FAIL
+---- Try submit otp with correct otp: __FROM__MOBILE__
+---- Try finish with empty name										- SHOULD FAIL
+---- Try finish with empty email (me)								- SHOULD FAIL
+---- Try finish with invalid email format: tokio@@yo					- SHOULD FAIL
+---- Try finish with valid email: sahilrajput03@gmail.com
+---- Try finish with empty password									- SHOULD FAIL
+---- Type password `password` and show/hide the password
+---- Try finish with valid password
+---- Successful signup
+---- Try sending OTP with mobile number u used some moments back		- SHOULD FAIL
+---- Send otp to a new number and sumit otp
+---- Try old email sahilrajput03@gmail.com
+
+
+# LOGIN PAGE
+--- Try with empty email
+--- Try with invalid email
+--- Try with non-existing user's email (obama@gmail.com)
+--- Try with exsting email (me) and use your password as password

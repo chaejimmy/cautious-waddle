@@ -1,0 +1,349 @@
+// for anything new to start
+
+.image__slide__show {
+	margin-top: 10px;
+
+	.hotel__image__wide {
+		position: relative;
+		height: 450px;
+
+		max-width: 1350px;
+		max-height: 450px;
+		border-radius: 15px;
+		overflow: hidden;
+
+		margin: auto;
+	}
+}
+
+.root__container__hotel__details {
+	width: 1350px;
+	margin: auto;
+
+	.date__and__container__icons {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-top: 24px;
+
+		.booking__date {
+			color: #696888;
+		}
+
+		.container__bookmark__and__share__icon {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			.bookmark__icon {
+				position: relative;
+				width: 40px;
+				height: 40px;
+			}
+			.share__icon {
+				position: relative;
+				width: 40px;
+				height: 40px;
+			}
+		}
+	}
+}
+
+.container__hotel__details {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-top: 15px;
+
+	.column__left {
+		max-width: 900px;
+	}
+
+	.column__right {
+		max-width: 400px;
+		margin-left: 50px;
+
+		.container__user {
+			padding: 20px;
+			box-shadow: 0px 6px 15px rgba(131, 130, 146, 0.2);
+			border: $borderLight;
+			border-radius: 20px;
+			margin-bottom: 20px;
+
+			&.me {
+				background: linear-gradient(274.21deg, #f26465 -19.11%, #736ffa 110.91%);
+			}
+
+			.container__upper {
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-start;
+				width: 100%;
+				max-width: 360px;
+				padding: 15px;
+				border: 1px solid #e9e9ee;
+				border-radius: 15px;
+				background: white;
+
+				.container__image__name__profession {
+					display: flex;
+					margin-right: 90px;
+					flex-shrink: 0;
+
+					.person__image {
+						width: 60px;
+						height: 60px;
+
+						&.rejected {
+							-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+							filter: grayscale(100%);
+						}
+					}
+
+					.container__name__and__profession {
+						margin-left: 11px;
+
+						.person__name {
+							font-weight: bold;
+							&.rejected {
+								color: darkgray;
+							}
+						}
+						.person__profession {
+							color: #696888;
+						}
+					}
+				}
+
+				.container__user__icon__and__rating {
+					display: flex;
+					width: fit-content;
+					padding: 7px 12px 3px 12px;
+					color: white;
+					background: #1a8f3a;
+					border-radius: 20px;
+
+					&.rejected {
+						background: darkgray;
+					}
+
+					.profile__user__icon__small {
+						position: relative;
+						width: 15px;
+						margin-right: 7px;
+					}
+				}
+			}
+
+			.container__buttons {
+				display: flex;
+				margin-top: 20px;
+				button {
+					width: 100%;
+					padding: 15px 0;
+					border-radius: 20px;
+					background: white;
+					color: #657adc;
+					border: 1px solid #657adc;
+				}
+				.send__message {
+					margin-left: 20px;
+					color: white;
+					background: #657adc;
+
+					&.rejected {
+						background: darkgray;
+						color: white;
+					}
+
+					.container__send__message {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+
+						& .rejected {
+							color: white;
+						}
+
+						.chat__icon {
+							position: relative;
+							width: 18px;
+							height: 17px;
+							margin-right: 7px;
+						}
+					}
+				}
+
+				.request {
+					$color: #657adc;
+					color: $color;
+					font-weight: bold;
+					border: 1px solid $color;
+				}
+				.pending {
+					$color: #b7b700;
+					color: $color;
+					font-weight: bold;
+					border: 1px solid $color;
+				}
+				.accepted {
+					$color: green;
+					color: $color;
+					font-weight: bold;
+					border: 1px solid $color;
+				}
+				.rejected {
+					cursor: default;
+					$color: darkgrey;
+					color: $color;
+					font-weight: bold;
+					border: 1px solid $color;
+				}
+			}
+		}
+
+		.btn__book__now {
+			width: 100%;
+			padding: 25px 0;
+			border: 3px solid transparent;
+			border-radius: 15px;
+			margin-top: 15px;
+			margin-bottom: 70px;
+			color: white;
+			background: $colorPrimary;
+			box-shadow: 0px 6px 15px rgba(131, 130, 146, 0.2);
+			font-weight: bold;
+
+			$myGradient: linear-gradient(274.21deg, #f26465 -19.11%, #736ffa 110.91%);
+
+			&.btn__waiting__list {
+				background: $myGradient;
+				border: 4px solid white;
+				box-shadow: none; // becoz it doesn't look good with border of 4px
+
+				&.btn__waiting__list__leave {
+					background: white;
+					color: $colorPrimary;
+
+					// src: 2nd example @ https://css-tricks.com/gradient-borders-in-css/
+					&.gradient-box {
+						position: relative; // necessary
+						color: $colorPrimary;
+						$borderSize: 4px;
+						background: white;
+						background-clip: padding-box; /* !importanté */
+						border: $borderSize solid transparent; /* !importanté */
+						border-radius: 1em;
+
+						&:before {
+							content: '';
+							position: absolute;
+							top: 0;
+							right: 0;
+							bottom: 0;
+							left: 0;
+							z-index: -1;
+							margin: -$borderSize; /* !importanté */
+							border-radius: inherit; /* !importanté */
+							background: $myGradient;
+						}
+					}
+				}
+			}
+		}
+
+		.heading__interested__partners {
+			font-size: 2.3rem;
+			font-weight: bold;
+			margin-bottom: 10px;
+			// font-weight: bold;
+		}
+	}
+}
+
+.container__name__and__rating {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+
+	.hotel__name {
+		font-size: 2.5rem;
+		font-weight: bold;
+	}
+
+	.rating__container {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		border: 1px solid #e9e9ee;
+		border-radius: 25px;
+		padding: 5px 15px;
+		margin-top: 10px;
+
+		.rating__number {
+			margin-left: 10px;
+			margin-top: 3px;
+			color: #787878;
+		}
+	}
+}
+
+.container__price {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 25px;
+	margin-bottom: 25px;
+	border-bottom: 1px solid #e9e9ee;
+
+	.date__and__gender__specific {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.start__end__date {
+			border: 1px solid #e9e9ee;
+			border-radius: 25px;
+			width: fit-content;
+			height: fit-content;
+			padding: 10px 20px;
+			background: white;
+		}
+
+		.male__female__only {
+			margin-left: 60px;
+			padding: 10px 20px;
+			border-radius: 25px;
+			background: #f26465;
+			color: white;
+		}
+	}
+
+	.container__price__and__per__day {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.hotel__price {
+			font-size: 2rem;
+		}
+		.per__day {
+			color: #696888;
+			font-size: 2rem;
+		}
+	}
+}
+
+.details__title {
+	font-size: 1.5rem;
+}
+.hotel__details {
+	margin-top: 17px;
+}
+
+.map__image {
+	margin-top: 34px;
+	max-width: 900px;
+	max-height: 300px;
+	border-radius: 15px;
+	overflow: hidden;
+}

@@ -1,0 +1,210 @@
+// Component: Signup Page
+.root__container__signup {
+	position: relative;
+	top: -75px;
+
+	.container__signup {
+		background: white;
+		max-width: 500px;
+		margin: auto;
+		margin-bottom: 35px;
+		// Shadow Beauty
+		margin-top: 40px;
+		box-shadow: 0 0px 30px 2px grey;
+		border-radius: 20px;
+
+		.stage1 {
+			// debugging only
+			// outline: 2px solid black;
+
+			.c1 {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				border-bottom: 1px solid lightgray;
+				padding: 5px;
+
+				// Fix the image
+				.c1__text {
+					font-size: 1rem;
+					text-align: center;
+				}
+
+				.back__icon {
+					width: 30px;
+					margin-top: 8px;
+				}
+			}
+
+			.inner__container {
+				padding: 35px;
+				.c2 {
+					font-size: 1.5rem;
+					font-weight: bold;
+					text-align: center;
+				}
+				.c3 {
+					font-size: 1rem;
+					text-align: center;
+					max-width: 350px;
+					text-align: center;
+					margin: 0 auto;
+					color: $colorGray;
+				}
+				.c4 {
+					color: $colorGray;
+					font-size: 1rem;
+					margin: 25px 0 7px;
+				}
+				.email__phone__field {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					// border: 2px solid;
+					background: $inputBoxBackground;
+					border-radius: 15px;
+					margin-bottom: 25px;
+
+					// setting size of <Image/> of next/image component
+					.country__flag > span {
+						width: 35px !important;
+						margin-left: 12px !important;
+						margin-top: 5px !important;
+					}
+
+					.c5 {
+						border-radius: 15px;
+						background: $inputBoxBackground;
+						padding: $inputBoxPadding;
+						outline: none;
+						font-size: 1rem;
+						width: 100%;
+					}
+				}
+				.c6 {
+					color: white;
+					width: 100%;
+					padding: 18px 0px;
+					font-size: 1.1rem;
+					background: $colorPrimary;
+					border-radius: 10px;
+				}
+				.c7 {
+					color: $colorGray;
+					font-size: 1.1rem;
+					text-align: center;
+					margin-top: 27px;
+					cursor: pointer;
+
+					span {
+						color: $colorPrimary;
+					}
+				}
+			}
+		}
+	}
+
+	.stage2 {
+		.container__otp__inputs {
+			display: flex;
+			justify-content: space-between;
+
+			// REMOVE ARROWS FROM NUMBER INPUT: https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp
+			/* Chrome, Safari, Edge, Opera */
+			input::-webkit-outer-spin-button,
+			input::-webkit-inner-spin-button {
+				-webkit-appearance: none;
+				margin: 0;
+			}
+			/* Firefox */
+			input[type='number'] {
+				-moz-appearance: textfield;
+			}
+			// REMOVE ARROWS FROM NUMBER INPUT: https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp
+
+			input {
+				min-width: 0px;
+				width: 72px;
+				height: 68px;
+				background-color: $inputBoxBackground;
+				border-radius: 12px;
+				font-size: 1.25rem;
+				outline: none;
+				text-align: center;
+			}
+		}
+
+		.c21 {
+			display: flex;
+			justify-content: space-between;
+
+			color: $colorGray;
+			font-size: 1.1rem;
+			text-align: center;
+			margin-top: 14px;
+			margin-bottom: 16px;
+
+			span {
+				color: $colorPrimary;
+			}
+		}
+		.c22 {
+			margin: auto;
+			text-align: center;
+			font-size: 0.875rem;
+			color: $colorPrimary;
+			margin-top: 7px;
+			margin-bottom: 28px;
+		}
+	}
+
+	.stage3 {
+		.input-label {
+			color: $colorGray;
+			font-size: 1rem;
+			margin: 25px 0 7px;
+		}
+		input {
+			background-color: $inputBoxBackground;
+			border-radius: 15px;
+			padding: 18px;
+			width: 100%;
+			outline: none;
+		}
+		.password__field {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			// border: 2px solid;
+			background: $inputBoxBackground;
+			border-radius: 15px;
+			margin-bottom: 26px;
+
+			.c71--wide-characters {
+				letter-spacing: 13px;
+			}
+
+			.c71 {
+				color: $colorGray;
+				border-radius: 15px;
+				background: $inputBoxBackground;
+				padding: $inputBoxPadding;
+				outline: none;
+				font-size: 1rem;
+				width: 100%;
+			}
+
+			// setting size of <Image/> of next/image component
+			.password__eye > span {
+				width: 18px !important;
+				margin-right: 21px !important;
+				margin-top: 5px !important;
+			}
+		}
+	}
+
+	// Setting size of the next/image's Image component.
+	.desired__signup__process > span {
+		width: 1640px !important;
+	}
+}

@@ -1,0 +1,48 @@
+// for anything new to start
+
+// used in common header: `components/PaymentModule/Header.tsx`
+.arrow__back {
+	cursor: pointer;
+}
+
+.root__container__payment__options {
+	max-width: 1050px;
+	box-shadow: 2px 0px 8px -1px grey;
+	margin-top: 100px;
+	margin-left: 100px;
+	border-radius: 15px;
+
+	.container__payment__options {
+		display: flex;
+
+		.column__left {
+			padding-left: 38px;
+			padding-right: 28px;
+			border-right: 0.1px solid lightgray;
+			min-width: 312px;
+
+
+
+			.container__amount{
+				margin-top: 25px;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+			}
+
+			.title {
+				font-size: 2rem;
+				max-width: 350px;
+				margin-top: 50px;
+			}
+			strong {
+				margin-left: 20px;
+				font-size: 1.4em;
+			}
+		}
+
+		.column__right{
+			width: 100%;
+		}
+	}
+}
